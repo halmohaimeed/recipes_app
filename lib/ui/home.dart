@@ -98,6 +98,11 @@ class Home extends StatelessWidget {
                   ),
                 ),
 
+                if(model.state == ViewState.Error)
+                Center(
+                  child: Text(model.error),
+                )
+                else
                 Flexible(
                   child: ListView.builder(
                     controller: _scrollController,

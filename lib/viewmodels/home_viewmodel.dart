@@ -39,8 +39,8 @@ class HomeViewmodel extends BaseModel {
         hasReachedLast = true;
       } else {
         recipesList.addAll(success);
-        setState(ViewState.Idle);
       }
+      setState(ViewState.Idle);
     }, (error) {
       setError(error.toString());
     });
